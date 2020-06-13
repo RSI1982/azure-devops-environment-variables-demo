@@ -27,10 +27,10 @@ stages:
     jobs:
     - deployment: deploy
       environment: DEV
-      strategy:
+        strategy:
         runOnce:
-          deploy:
-            steps:
+        deploy:
+        steps:
             - script: echo Hello, development world!
             - task: replacetokens@3
               inputs:
